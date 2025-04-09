@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center> 
+        <fieldset style="background-color: rgb(174, 222, 243);" >
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/05/TSRTC_LOGO.png" alt="" width="60">
+    <h2 style="color: blue;">TELENGANA STATE ROAD TRANSPORT CORPORATION</h2>
+    <h2>GENERAL BUS PASS APPLICATION</h2>
+   </fieldset>
+   <br>
+    </center>
+
+    <fieldset>
+        <legend style="background-color: rgb(152, 152, 248);" >Application Details</legend>
+        <center>
+        <table cellspacing="1" cellpadding="10">
+            <form action="">
+            <tr>
+                <td><label for="ar">Name*</label> 
+                <input type="text" maxlength="20" id="ar"></td>
+                <td><label for="kk">Father's/Guardian's  Name*</label>
+                    <input type="text" name="" id="kk"></td>
+            </tr>
+            
+            <tr>
+                <td> <label for="kk">date of birth*</label>
+                    <input type="date" name="" id="kk">
+                </td>
+                <td><label for="">Gender*</label>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="ml" name="kk">
+                    <label for="ml">male</label> &nbsp;&nbsp;
+                    <input type="radio" id="fl" name="kk">
+                    <label for="fl">female</label></td>
+            </tr>
+            <tr>
+                <td><label for="age">Age As on:</label>
+                    <input type="number" id="age_day" name="day" min="1" max="5">Year(s)
+                    <input type="number" id="age_day" name="day" min="1" max="5">month(s)
+                    <input type="number" id="age_day" name="day" min="1" max="5">Day(s)</td>
+                <td><label for="kr">Aadhaar N0 :</label> 
+                    <input type="number" maxlength="15" id="kr"> </td>
+            </tr>
+            <tr>
+                <td><label for="">Whatsapp No* </label> 
+                    <input type="number" maxlength="10" ></td>
+                    <td><label for="">E-mail Id*</label> 
+                        <input type="mail" maxlength="25" ></td>
+            </tr>
+            <tr>
+                <td><label for="">Photo*</label> 
+                    <input type="file" placeholder=""></td></tr>
+            </tr>
+            </form>
+        </table>
+    </center>
+    </fieldset>
+    <br>
+    <fieldset>
+    
+        <legend style="background-color: rgb(152, 152, 252);"
+         >Residential Addrees Details</legend>
+        <center>
+        <table cellspacing="1" cellpadding="10">
+        <tr>
+            <td><label for="">Applicant's Address*</label>
+                <textarea name="Address" id="" cols="30" rows="4"></textarea></td>
+            <td> <label for="sel">District*</label> <select name="" id="sel">
+                <option value="" >HYDERABAD</option>
+                <option value="">Other</option>
+            </select> </td>
+        </tr>
+        <tr>
+            <td><label for="sel">Mandal*</label> <select name="" id="sel">
+                <option value="">HYDERABAD</option>
+                <option value="other"></option>
+            </select></td> 
+            <td><label for="sel">Vilage*</label> 
+                <select name="" id="sel">
+                <option value="" >HYDERABAD</option>
+                <option value="">Other</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td><label for="sel">Pincode*</label><input type="number"> </td>
+            
+        </tr>
+
+    
+        </table>
+    </center>
+    
+    </fieldset>
+    <br>
+
+    <fieldset>
+       
+        <legend style="background-color: rgb(148, 148, 245);"  >Pass type Details</legend>
+        <center>
+        <table cellspacing="1" cellpadding="10">
+        <tr>
+        </tr>
+        <tr>
+            <td><label for="sel">City*</label>
+                 <select name="" id="sel">
+                <option value="Select"  > Select</option>
+                <option value="" >HYDERABAD</option>
+                <option value="" >Other</option>
+            </select></td> 
+        </tr>
+        <tr>
+            <td><label for="sel">PassType*</label> 
+                <select name="" >
+                    <option value="">--Select--</option>
+                    <option value="">Ordinary Pass</option>
+                    <option value="">Metro pass</option>
+                </select>
+            </td>
+            
+        </tr>
+
+    
+        </table>
+        </center>
+    
+    </fieldset>
+    <br>
+    <fieldset><legend style="background-color: rgb(151, 151, 250);">Mode of Payment & pass collection</legend>
+        <!-- Mode of Payment & Collection Section -->
+        <center>
+        <div class="section">
+            <label for="payment-mode">Payment Mode *</label>
+            <select id="payment-mode" name="payment-mode" required>
+                <option value="" disabled selected>Select Payment Mode</option>
+                <option value="online">Online</option>
+                <option value="cash">Cash</option>
+                <!-- Add other modes here -->
+            </select>
+            <br>
+            <br>
+            <label for="delivery-mode">Pass Delivery Mode *</label>
+            <select id="delivery-mode" name="delivery-mode" required>
+                <option value="" disabled selected>Select Pass Delivery Mode</option>
+                <option value="pickup">Pickup</option>
+                <option value="home-delivery">Home Delivery</option>
+                <!-- Add other delivery modes here -->
+            </select>
+
+            <br>
+            <br>
+
+            <label for="delivery-mode" >Pass Delivery Mode *</label>
+            <select id="delivery-mode" name="delivery-mode" required>
+                <option value="" disabled selected>Select Pass Delivery Mode</option>
+                <option value="pickup">Pickup</option>
+                <option value="home-delivery">Home Delivery</option>
+                <!-- Add other delivery modes here -->
+            </select>
+            </center>
+            
+
+
+    </fieldset>
+    <br>
+    <center><img src="https://images.fastcompany.com/image/upload/f_webp,c_fit,w_1920,q_auto/fc/captcha-internet-translate.jpg" alt="" width="100" height="40"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIMjeZ5RMcVXpiExCANZace07n77C_uEXrUJjSdIfyc1CBK85XKEs0aSW_gkBQvLW_J4k&usqp=CAU" alt="" width="50" height="40">
+        <br>
+        <br>
+    <input type="text">
+    <br>
+    <br>
+<button >Submit</button></center> 
+    
+
+   
+</body>
+</html>
