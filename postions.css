@@ -1,0 +1,161 @@
+.main{
+    width: 100%;
+    
+    display: inline-block;
+  
+    
+
+
+}
+.m1{
+ position: relative;
+ display: inline-block;
+ width: 350px;
+ margin: 10px;
+ position: relative;
+
+}
+.m11{
+position: absolute;
+left: 0px;
+top: 0px;
+margin: 0px;
+color: azure;
+background-color: black;
+padding: 5px;
+
+}
+
+.m2{
+ position: relative;
+ display: inline-block;
+ width: 350px;
+ margin: 10px;
+ 
+}
+.m22{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    margin: 0px;
+    color: azure;
+background-color: black;
+padding: 5px;
+    
+    }
+
+.m3{
+    position: relative;
+    display: inline-block;
+    width: 350px;
+    margin: 10px;
+   }
+.m33{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    margin: 0px;
+    color: azure;
+background-color: black;
+padding: 5px;
+    
+    }
+
+.m4{
+    position: relative;
+    display: inline-block;
+    width: 350px;
+    margin: 10px;
+   }
+.m44{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    margin: 0px;
+    color: azure;
+background-color: black;
+padding: 5px;
+    
+    }
+.mainp{
+        width: 100%;
+        
+        display: inline-block;
+      
+        
+    
+    
+    }
+    .m1p{
+     position: relative;
+     display: inline-block;
+     width: 350px;
+     margin: 10px;
+     position: relative;
+    
+    }
+    .m11p{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    margin: 0px;
+    color: azure;
+    background-color: black;
+    padding: 5px;
+    
+    }
+    
+    .m2p{
+     position: relative;
+     display: inline-block;
+     width: 350px;
+     margin: 10px;
+     
+    }
+    .m22p{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        margin: 0px;
+        color: azure;
+    background-color: black;
+    padding: 5px;
+        
+        }
+    
+    .m3p{
+        position: relative;
+        display: inline-block;
+        width: 350px;
+        margin: 10px;
+       }
+    .m33p{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        margin: 0px;
+        color: azure;
+    background-color: black;
+    padding: 5px;
+        
+        }
+    
+    .m4p{
+        position: relative;
+        display: inline-block;
+        width: 350px;
+        margin: 10px;
+       }
+    .m44p{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        margin: 0px;
+        color: azure;
+    background-color: black;
+    padding: 5px;
+        
+        }
+img{
+    width: 100%;
+}
