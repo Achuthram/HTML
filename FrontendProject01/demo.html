@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Centered Buttons & Grid Containers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    /* Center button group */
+    .button-group {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      margin: 5px;
+      /* background-color: #2ecc71; */
+      border: 2px solid grey;
+      color: rgb(16, 15, 15);
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #27ae60;
+    }
+
+    .grid-container {
+      display: none;
+      grid-template-columns: repeat(3, 1fr); /* 3 containers per row */
+      gap: 5%;
+      margin: 0 auto;
+      max-width: 900px; /* Optional: Limit width for cleaner layout */
+    }
+
+    .box {
+      /* padding: 20px; */
+      /* background-color: #f9f9f9; */
+        background-color: #222831;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      /* text-align: center; */
+      /* font-weight: bold; */
+      width: 17vw;
+      height: 45vh;
+
+    }
+
+    /* Show containers when buttons are clicked */
+    #b1:checked ~ .group1,
+    #b2:checked ~ .group2,
+    #b3:checked ~ .group3,
+    #b4:checked ~ .group4,
+    #b5:checked ~ .group5 {
+      display: grid;
+    }
+    .part3{
+    margin-top: 6%;
+    border: 2px solid green;
+    width: 100vw;
+    /* height: 50vh; */
+}
+.part3menu{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+.innerbox{
+  width: 100%;
+  height: 50%;
+  border-top-left-radius: 3%;
+  border-top-right-radius: 3%;
+  border-bottom-left-radius: 15%;
+  background-color: #e7ece9;
+   
+}
+.innerbox-img{
+  margin-top: 10%;
+  margin-left: 23%;
+  width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.part3header{
+    margin-top: 3%;
+    width: 100vw;
+    height: 10%;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+.part33main{
+    width: 70%;
+    border: 2px solid orangered;
+    margin-left: 16%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+    padding-bottom: 5%;
+}
+
+
+.part33{
+    width: 20vw;
+    height: 45vh;
+    /* border: 2px solid green; */
+   background-color: #222831;
+    border-radius: 5%;
+
+}
+.inner{
+    width: 100%;
+    height: 50%;
+    background-color: rgb(229, 226, 226);
+    /* border-radius: 5%; */
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 15%;
+    display: flex;
+    justify-content: center;
+    
+}
+.part33img{
+    margin: 8%;
+    width: 50%;
+    height: 80%;
+
+}
+.part3-matter{
+    color: white; 
+    margin-top: 3%;  
+    margin-left: 10%;
+}
+.part33cart{
+    margin-left: 60%;
+    padding: 1.5%;
+    /* border: 2px solid gray; */
+    color: white;
+    background-color: orange;
+    border-radius: 50%;
+    z-index: 1;
+    
+}
+  </style>
+</head>
+<body>
+
+  <!-- Hidden Radio Buttons -->
+  <input type="radio" name="btn" id="b1" checked>
+  <input type="radio" name="btn" id="b2">
+  <input type="radio" name="btn" id="b3">
+  <input type="radio" name="btn" id="b4">
+  <input type="radio" name="btn" id="b5">
+  <!-- <input type="radio" name="btn" id="b6"> -->
+
+  <!-- Centered Button Group -->
+  <div class="button-group">
+    <label class="btn" for="b1">All</label>
+    <label class="btn" for="b2">Burger</label>
+    <label class="btn" for="b3">Pizza</label>
+    <label class="btn" for="b4">Pasta</label>
+    <label class="btn" for="b5">Fries</label>
+    <!-- <label class="btn" for="b6">Clear All</label> -->
+  </div>
+
+  <!-- Group 1: 6 containers -->
+  <div class="grid-container group1">
+    <div class="box">
+        <div class="innerbox">
+            <img src="https://themewagon.github.io/feane/images/f1.png" alt="" class="innerbox-img">
+        </div>
+        <h3 class="part3-matter">Delicious Pizza</h3>
+          <p class="part3-matter">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem</p>
+        <span class="part3-matter">$20</span>
+        <span class="part33cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
+            </svg>
+         </span>
+
+
+
+
+
+              <!-- <div class="part33 items1">
+                  <div class="inner item1">
+                    <img src="https://themewagon.github.io/feane/images/f1.png" alt="" class="part33img">
+                  </div>
+                  <h3 class="part3-matter">Delicious Pizza</h3>
+                  <p class="part3-matter">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</p>
+                <span class="part3-matter">%20</span>
+                <span class="part33cart">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                      <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                    </svg>
+                </span>
+            </div> -->
+    </div>
+    <div class="box">
+      <div class="innerbox">
+            <img src="https://themewagon.github.io/feane/images/f2.png" alt="" class="innerbox-img">
+        </div>
+        <h3 class="part3-matter">Delicious Burger</h3>
+          <p class="part3-matter">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem</p>
+        <span class="part3-matter">$15</span>
+        <span class="part33cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
+            </svg>
+         </span>
+
+    </div>
+    <div class="box">
+      <div class="innerbox">
+            <img src="https://themewagon.github.io/feane/images/f3.png" alt="" class="innerbox-img">
+        </div>
+        <h3 class="part3-matter">Delicious Pizza</h3>
+          <p class="part3-matter">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem</p>
+        <span class="part3-matter">$17</span>
+        <span class="part33cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
+            </svg>
+         </span>
+    </div>
+    <div class="box">
+      <div class="innerbox">
+            <img src="https://themewagon.github.io/feane/images/f1.png" alt="" class="innerbox-img">
+        </div>
+        <h3 class="part3-matter">Delicious Pasta</h3>
+          <p class="part3-matter">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem</p>
+        <span class="part3-matter">$18</span>
+        <span class="part33cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
+            </svg>
+         </span>
+    </div>
+    <div class="box">
+      <div class="innerbox">
+            <img src="https://themewagon.github.io/feane/images/f5.png" alt="" class="innerbox-img">
+        </div>
+        <h3 class="part3-matter">French Fries</h3>
+          <p class="part3-matter">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem</p>
+        <span class="part3-matter">$10</span>
+        <span class="part33cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
+            </svg>
+         </span>
+
+    </div>
+    <div class="box">
+      <div class="innerbox">
+            <img src="https://themewagon.github.io/feane/images/f6.png" alt="" class="innerbox-img">
+        </div>
+        <h3 class="part3-matter">Delicious Pizza</h3>
+          <p class="part3-matter">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem</p>
+        <span class="part3-matter">$15</span>
+        <span class="part33cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
+            </svg>
+         </span>
+    </div>
+    <div class="box">
+      <div class="innerbox">
+            <img src="https://themewagon.github.io/feane/images/f5.png" alt="" class="innerbox-img">
+        </div>
+        <h3 class="part3-matter">French Fries</h3>
+          <p class="part3-matter">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem</p>
+        <span class="part3-matter">$10</span>
+        <span class="part33cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
+            </svg>
+         </span>
+
+    </div>
+    <div class="box">
+      <div class="innerbox">
+            <img src="https://themewagon.github.io/feane/images/f2.png" alt="" class="innerbox-img">
+        </div>
+        <h3 class="part3-matter">Delicious Burger</h3>
+          <p class="part3-matter">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem</p>
+        <span class="part3-matter">$15</span>
+        <span class="part33cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
+            </svg>
+         </span>
+
+    </div>
+    <div class="box">
+      <div class="innerbox">
+            <img src="https://themewagon.github.io/feane/images/f1.png" alt="" class="innerbox-img">
+        </div>
+        <h3 class="part3-matter">Delicious Pasta</h3>
+          <p class="part3-matter">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem</p>
+        <span class="part3-matter">$18</span>
+        <span class="part33cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
+            </svg>
+         </span>
+    </div>
+  </div>
+
+  <!-- Group 2: 3 containers -->
+  <div class="grid-container group2">
+    <div class="box">
+      <div class="innerbox">
+            <img src="https://themewagon.github.io/feane/images/f2.png" alt="" class="innerbox-img">
+        </div>
+        <h3 class="part3-matter">Delicious Burger</h3>
+          <p class="part3-matter">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem</p>
+        <span class="part3-matter">$15</span>
+        <span class="part33cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
+            </svg>
+         </span>
+    </div>
+    <div class="box">
+      <div class="innerbox">
+            <img src="https://themewagon.github.io/feane/images/f1.png" alt="" class="innerbox-img">
+        </div>
+        <h3 class="part3-matter">Tasty Burger</h3>
+          <p class="part3-matter">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem</p>
+        <span class="part3-matter">$12</span>
+        <span class="part33cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
+            </svg>
+         </span>
+    </div>
+    <div class="box">
+      <div class="innerbox">
+            <img src="https://themewagon.github.io/feane/images/f8.png" alt="" class="innerbox-img">
+        </div>
+        <h3 class="part3-matter">Tasty Burger</h3>
+          <p class="part3-matter">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem</p>
+        <span class="part3-matter">$14</span>
+        <span class="part33cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
+            </svg>
+         </span>
+    </div>
+  </div>
+
+  <!-- Group 3: 3 containers -->
+  <div class="grid-container group3">
+    <div class="box">
+      <div class="innerbox">
+            <img src="https://themewagon.github.io/feane/images/f1.png" alt="" class="innerbox-img">
+        </div>
+        <h3 class="part3-matter">Delicious Pizza</h3>
+          <p class="part3-matter">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem</p>
+        <span class="part3-matter">$20</span>
+        <span class="part33cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
+            </svg>
+         </span>
+    </div>
+    <div class="box">
+      <div class="innerbox">
+            <img src="https://themewagon.github.io/feane/images/f3.png" alt="" class="innerbox-img">
+        </div>
+        <h3 class="part3-matter">Delicious Pizza</h3>
+          <p class="part3-matter">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem</p>
+        <span class="part3-matter">$17</span>
+        <span class="part33cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
+            </svg>
+         </span>
+    </div>
+    <div class="box">
+      <div class="innerbox">
+            <img src="https://themewagon.github.io/feane/images/f6.png" alt="" class="innerbox-img">
+        </div>
+        <h3 class="part3-matter">Delicious Pizza</h3>
+          <p class="part3-matter">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem</p>
+        <span class="part3-matter">$15</span>
+        <span class="part33cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
+            </svg>
+         </span>
+    </div>
+  </div>
+
+  <!-- Group 4: 2 containers -->
+  <div class="grid-container group4">
+    <div class="box">
+      <div class="innerbox">
+            <img src="https://themewagon.github.io/feane/images/f4.png" alt="" class="innerbox-img">
+        </div>
+        <h3 class="part3-matter">Delicious Pizza</h3>
+          <p class="part3-matter">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem</p>
+        <span class="part3-matter">$18</span>
+        <span class="part33cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
+            </svg>
+         </span>
+    </div>
+    <div class="box">
+      <div class="innerbox">
+            <img src="https://themewagon.github.io/feane/images/f9.png" alt="" class="innerbox-img">
+        </div>
+        <h3 class="part3-matter">Delicious Pizza</h3>
+          <p class="part3-matter">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem</p>
+        <span class="part3-matter">$10</span>
+        <span class="part33cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
+            </svg>
+         </span>
+    </div>
+  </div>
+
+  <!-- Group 5: 1 container -->
+  <div class="grid-container group5">
+    <div class="box">
+      <div class="innerbox">
+            <img src="https://themewagon.github.io/feane/images/f5.png" alt="" class="innerbox-img">
+        </div>
+        <h3 class="part3-matter">French Fries</h3>
+          <p class="part3-matter">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem</p>
+        <span class="part3-matter">$10</span>
+        <span class="part33cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
+            </svg>
+         </span>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
